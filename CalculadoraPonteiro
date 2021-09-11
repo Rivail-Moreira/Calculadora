@@ -1,0 +1,52 @@
+#include<stdio.h>
+
+int resto(int x, int y, int *res){
+    *res = x%y;
+}
+int divisao(int x, int y, int *res){
+     *res = x/y;   
+
+}
+int multiplicacao(int x, int y, int *res){
+    *res = x*y;
+}
+int subtracao(int x, int y, int *res){
+    *res = x-y;
+}
+int soma(int x, int y, int *res){
+    *res = x+y;
+}
+int main(){
+    int a, b, resultado = 0;
+    int *c;
+
+       
+    printf("Digite o valor de a: ");
+    scanf("%d",&a);
+    printf("Digite o valor de b: ");
+    scanf("%d",&b);
+
+    resultado = *c;
+    soma(a,b,c);
+    printf("Resultado da operacao soma: %d", *c);
+
+    resultado = *c;
+    subtracao(a,b,c);
+    printf("\nResultado da operacao subtracao: %d", *c);
+
+    resultado = *c;
+    multiplicacao(a,b,c);
+    printf("\nResultado da operacao multiplicacao: %d", *c);
+
+    resultado = *c;
+    divisao(a,b,c);
+    if(b != 0){
+        printf("\nResultado da operacao divisao: %d", *c);
+    }
+
+    resultado = *c;
+    resto(a,b,c);
+    printf("\nResultado da operacao resto: %d", *c);
+
+return 0;
+}
